@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="body">
+        <div class="head">
+            <div class="logo"><img src="logo.png" alt="not support"></div>
+            <div class="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>photo</li>
+                    <li>Brand</li>
+                </ul>
+            </div>
+            <div class="information">
+                <div class="over-layer"></div>
+                <img src="mobile.png" alt="not" class="mobile">
+                
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="camera.png" alt="not">
+                        <div>
+                            <h1>Camera</h1>
+                            <p>12MP,Wide Angale Lens</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="display.png" alt="not">
+                        <div>
+                            <h1>Display</h1>
+                            <p>6.5" mini-Drop HD</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="battery.png" alt="not">
+                        <div>
+                            <h1>Battery</h1>
+                            <p>5000mAH  72hrs Standby</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="processor.png" alt="not">
+                        <div>
+                            <h1>Processor</h1>
+                            <p>Snapdragon Ocat-core 11nm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containt">
+            <img src="/arrow.png" alt="not" id="upbtn">
+            <h3>Feature</h3>
+            <img src="/arrow.png" alt="not" id="downbtn">
+        </div>
+    </div>
+    <script>
+        let circle=document.getElementById("circle");
+        let upbtn=document.getElementById("upbtn");
+        let downbtn=document.getElementById("downbtn");
+        let rotateValue=circle.style.transform;
+        let rotateSum;
+
+        upbtn.onclick=function(){
+            rotateSum=rotateValue + "rotate(-90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum
+        }
+         
+        downbtn.onclick=function(){
+            rotateSum=rotateValue + "rotate(90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+    </script>
+    
+</body>
+</html>
